@@ -1620,7 +1620,33 @@ Portfolio
 
 .portfolio-item .thumb {
   position: relative;
-  border-radius: 50px;
+}
+
+.portfolio-item {
+  position: relative; /* Ensure relative positioning for absolute centering */
+  border-top-right-radius: 23px;
+  border-top-left-radius: 23px;
+  overflow: hidden;
+}
+
+.thumb {
+  position: relative;
+  display: flex;
+  justify-content: center; /* Center video horizontally */
+  align-items: center; /* Center video vertically */
+  height: 200px; /* Adjust height as needed */
+  overflow: hidden;
+}
+
+.thumb video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the video within .thumb */
+  min-width: 100%; /* Ensure video covers the entire .thumb */
+  min-height: 100%;
+  width: auto;
+  height: auto;
 }
 
 .portfolio-item:hover .down-content h4,
