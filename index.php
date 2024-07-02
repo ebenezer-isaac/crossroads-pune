@@ -44,7 +44,9 @@
   <title>Crossroads Pune</title>
 
   <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+    integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
   <!-- Additional CSS Files -->
@@ -189,54 +191,54 @@ https://templatemo.com/tm-568-digimedia
       <div class="row">
         <div class="col-lg-12">
           <div class="loop owl-carousel">
-          <?php
-// Define the directories to search in
-$imageDir = 'assets/images/';
-$videoDir = 'assets/videos/';
+            <?php
+            // Define the directories to search in
+            $imageDir = 'assets/images/';
+            $videoDir = 'assets/videos/';
 
-// Use glob() to find files that match the pattern 'gallery_*' for both jpg and png images
-$imagesJpg = glob($imageDir . 'gallery_*.jpg');
-$imagesPng = glob($imageDir . 'gallery_*.png');
-$videos = glob($videoDir . 'gallery_*.mp4');
+            // Use glob() to find files that match the pattern 'gallery_*' for both jpg and png images
+            $imagesJpg = glob($imageDir . 'gallery_*.jpg');
+            $imagesPng = glob($imageDir . 'gallery_*.png');
+            $videos = glob($videoDir . 'gallery_*.mp4');
 
-// Combine jpg and png images, then merge with videos and shuffle the array to mix images and videos
-$images = array_merge($imagesJpg, $imagesPng);
-$galleryItems = array_merge($images, $videos);
-shuffle($galleryItems);
+            // Combine jpg and png images, then merge with videos and shuffle the array to mix images and videos
+            $images = array_merge($imagesJpg, $imagesPng);
+            $galleryItems = array_merge($images, $videos);
+            shuffle($galleryItems);
 
-// Loop through the gallery items and display them
-foreach ($galleryItems as $item) {
-  // Extract information from the file name
-  preg_match('/gallery_\d+_(.+)_(.+)\.(jpg|png|mp4)$/', $item, $matches);
-  $title = str_replace('_', ' ', $matches[1]);
-  $category = str_replace('_', ' ', $matches[2]);
-  $fileType = $matches[3];
+            // Loop through the gallery items and display them
+            foreach ($galleryItems as $item) {
+              // Extract information from the file name
+              preg_match('/gallery_\d+_(.+)_(.+)\.(jpg|png|mp4)$/', $item, $matches);
+              $title = str_replace('_', ' ', $matches[1]);
+              $category = str_replace('_', ' ', $matches[2]);
+              $fileType = $matches[3];
 
-  // Check if the item is an image (jpg or png) or a video and display accordingly
-  if ($fileType == 'jpg' || $fileType == 'png') {
-    echo '<div class="portfolio-item">';
-    echo '<div class="thumb">';
-    echo '<img src="' . $item . '" alt="">';
-    echo '</div>';
-    echo '<div class="down-content">';
-    echo '<h4>' . $title . '</h4>';
-    echo '<span>' . $category . '</span>';
-    echo '</div>';
-    echo '</div>';
-  } elseif ($fileType == 'mp4') {
-    echo '<div class="item">';
-    echo '<div class="portfolio-item">';
-    echo '<div class="thumb">';
-    echo '<video src="' . $item . '" muted loop></video>';
-    echo '</div>';
-    echo '<div class="down-content">';
-    echo '<h4>' . $title . '</h4>';
-    echo '<span>' . $category . '</span>';
-    echo '</div>';
-    echo '</div>';
-    echo '</div>';
-  }
-}?>
+              // Check if the item is an image (jpg or png) or a video and display accordingly
+              if ($fileType == 'jpg' || $fileType == 'png') {
+                echo '<div class="portfolio-item">';
+                echo '<div class="thumb">';
+                echo '<img src="' . $item . '" alt="">';
+                echo '</div>';
+                echo '<div class="down-content">';
+                echo '<h4>' . $title . '</h4>';
+                echo '<span>' . $category . '</span>';
+                echo '</div>';
+                echo '</div>';
+              } elseif ($fileType == 'mp4') {
+                echo '<div class="item">';
+                echo '<div class="portfolio-item">';
+                echo '<div class="thumb">';
+                echo '<video src="' . $item . '" muted loop></video>';
+                echo '</div>';
+                echo '<div class="down-content">';
+                echo '<h4>' . $title . '</h4>';
+                echo '<span>' . $category . '</span>';
+                echo '</div>';
+                echo '</div>';
+                echo '</div>';
+              }
+            } ?>
           </div>
         </div>
       </div>
@@ -466,9 +468,13 @@ foreach ($galleryItems as $item) {
 
 
   <!-- Scripts -->
-  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js" integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"
+    integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="assets/js/owl-carousel.js"></script>
   <script src="assets/js/animation.js"></script>
   <script src="assets/js/imagesloaded.js"></script>
