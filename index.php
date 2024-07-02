@@ -283,10 +283,9 @@ https://templatemo.com/tm-568-digimedia
               <a href="#"><img src="assets/images/camp.jpg" alt=""></a>
             </div>
             <div class="down-content">
-              <h5>" Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doers itii eiumod deis tempor
-                incididunt ut labore."</h5>
+              <h5>"Every night we had Cabin talks that provided a wonderful opportunity for sharing and building deeper connections, creating a strong sense of community. The camp's beautiful, peaceful nature was perfect for relaxation and reflection."</h5>
               <div style="padding-top: 1rem;">
-                <span class="author"><img src="assets/images/author-post.jpg" alt="">By: Andrea Mentuzi</span>
+                <span class="author"><img src="assets/images/rachna.jpg" alt="">By: <a href="https://www.instagram.com/reev_ee_/">Rachna Bharti</a></span>
               </div>
             </div>
           </div>
@@ -297,10 +296,9 @@ https://templatemo.com/tm-568-digimedia
               <div class="col-lg-12" style="padding-bottom:0.5rem;">
                 <div class="blog-post">
                   <div class="down-content">
-                    <h5>" Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doers itii eiumod deis tempor
-                      incididunt ut labore."</h5>
+                    <h5>"In all honesty, the camp exceeded all my expectations and left a lasting impression on me. I am very grateful for the memories made, the lessons learned, and the friendships formed. I cannot recommend this experience enough to anyone seeking adventure, personal growth, and genuine connections."</h5>
                     <div style="padding-top: 1rem;">
-                      <span class="author"><img src="assets/images/author-post.jpg" alt="">By: Andrea Mentuzi</span>
+                      <span class="author"><img src="assets/images/prithvi.jpg" alt="">By: <a href="https://www.instagram.com/thesillyassassin/">Prithvi</a></span>
                     </div>
                   </div>
                 </div>
