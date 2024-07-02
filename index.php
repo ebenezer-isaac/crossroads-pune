@@ -277,8 +277,8 @@ foreach ($galleryItems as $item) {
           </div>
         </div>
         <div class="col-lg-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
-          <div class="blog-post">
-            <div class="thumb">
+          <div class="blog-post" style="height:100%">
+            <div class="thumb" style="height:auto">
               <a href="#"><img src="assets/images/camp.jpg" alt=""></a>
             </div>
             <div class="down-content">
