@@ -145,7 +145,7 @@ https://templatemo.com/tm-568-digimedia
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <div class="row">
+          <div class="row" style="padding:1rem;">
             <div class="col-lg-6">
               <div class="about-left-image  wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">
                 <img src="assets/images/logo.png" alt="">
@@ -409,7 +409,7 @@ https://templatemo.com/tm-568-digimedia
                         </div>
                       </a>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 col-md-8">
                       <fieldset>
                         <input type="name" name="name" id="name" placeholder="Name" autocomplete="on" required>
                       </fieldset>
