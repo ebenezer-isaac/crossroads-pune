@@ -53,13 +53,7 @@
   <link rel="stylesheet" href="assets/css/template.css">
   <link rel="stylesheet" href="assets/css/animated.css">
   <link rel="stylesheet" href="assets/css/owl.css">
-  <!--
-
-TemplateMo 568 DigiMedia
-
-https://templatemo.com/tm-568-digimedia
-
--->
+ 
 </head>
 
 <body>
@@ -123,8 +117,8 @@ https://templatemo.com/tm-568-digimedia
                   <div class="col-lg-12">
                     <h6>Upcoming Event</h6>
                     <h2>Adventure Camp</h2>
-                    <p style="color: black;">The best weekend of your life! A fun filled adventure camp
-                      right in the middle of nature, packed with activities and workshops.</p>
+                    <h5 style="color: black; padding-bottom:1rem;">The best weekend of your life! A fun filled adventure camp
+                      right in the middle of nature, packed with activities and workshops.</h5>
                   </div>
                   <div class="col-lg-12">
                     <div class="border-first-button scroll-to-section">
@@ -283,9 +277,12 @@ https://templatemo.com/tm-568-digimedia
               <a href="#"><img src="assets/images/camp.jpg" alt=""></a>
             </div>
             <div class="down-content">
-              <h5>"Every night we had Cabin talks that provided a wonderful opportunity for sharing and building deeper connections, creating a strong sense of community. The camp's beautiful, peaceful nature was perfect for relaxation and reflection."</h5>
+              <h5>"Every night we had Cabin talks that provided a wonderful opportunity for sharing and building deeper
+                connections, creating a strong sense of community. The camp's beautiful, peaceful nature was perfect for
+                relaxation and reflection."</h5>
               <div style="padding-top: 1rem;">
-                <span class="author"><img src="assets/images/rachna.jpg" alt="">By: <a href="https://www.instagram.com/reev_ee_/">Rachna Bharti</a></span>
+                <span class="author"><img src="assets/images/rachna.jpg" alt="">By: <a
+                    href="https://www.instagram.com/reev_ee_/">Rachna Bharti</a></span>
               </div>
             </div>
           </div>
@@ -296,9 +293,13 @@ https://templatemo.com/tm-568-digimedia
               <div class="col-lg-12" style="padding-bottom:0.5rem;">
                 <div class="blog-post">
                   <div class="down-content">
-                    <h5>"In all honesty, the camp exceeded all my expectations and left a lasting impression on me. I am very grateful for the memories made, the lessons learned, and the friendships formed. I cannot recommend this experience enough to anyone seeking adventure, personal growth, and genuine connections."</h5>
+                    <h5>"In all honesty, the camp exceeded all my expectations and left a lasting impression on me. I am
+                      very grateful for the memories made, the lessons learned, and the friendships formed. I cannot
+                      recommend this experience enough to anyone seeking adventure, personal growth, and genuine
+                      connections."</h5>
                     <div style="padding-top: 1rem;">
-                      <span class="author"><img src="assets/images/prithvi.jpg" alt="">By: <a href="https://www.instagram.com/thesillyassassin/">Prithvi</a></span>
+                      <span class="author"><img src="assets/images/prithvi.jpg" alt="">By: <a
+                          href="https://www.instagram.com/thesillyassassin/">Prithvi</a></span>
                     </div>
                   </div>
                 </div>
