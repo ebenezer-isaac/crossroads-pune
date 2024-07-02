@@ -190,30 +190,53 @@ https://templatemo.com/tm-568-digimedia
       <div class="row">
         <div class="col-lg-12">
           <div class="loop owl-carousel">
-            <div class="item">
-              <div class="portfolio-item">
-                <div class="thumb">
-                  <video src="assets/videos/water.mp4" muted loop></video>
-                </div>
-                <div class="down-content">
-                  <h4>Game Night</h4>
-                  <span>Marketing</span>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <a href="#">
-                <div class="portfolio-item">
-                  <div class="thumb">
-                    <img src="assets/images/portfolio-01.jpg" alt="">
-                  </div>
-                  <div class="down-content">
-                    <h4>Adventure Camp</h4>
-                    <span>Marketing</span>
-                  </div>
-                </div>
-              </a>
-            </div>
+            <?php
+            // Define the directories to search in
+            $imageDir = 'assets/images/';
+            $videoDir = 'assets/videos/';
+
+            // Use glob() to find files that match the pattern 'gallery_*'
+            $images = glob($imageDir . 'gallery_*.jpg');
+            $videos = glob($videoDir . 'gallery_*.mp4');
+
+            // Combine and shuffle the array to mix images and videos
+            $galleryItems = array_merge($images, $videos);
+            shuffle($galleryItems);
+
+            // Loop through the gallery items and display them
+            foreach ($galleryItems as $item) {
+              // Extract information from the file name
+              preg_match('/gallery_\d+_(.+)_(.+)\.(jpg|mp4)$/', $item, $matches);
+              $title = str_replace('_', ' ', $matches[1]);
+              $category = str_replace('_', ' ', $matches[2]);
+              $fileType = $matches[3];
+
+              // Check if the item is an image or a video and display accordingly
+              if ($fileType == 'jpg') {
+                echo '<div class="portfolio-item">';
+                echo '<div class="thumb">';
+                echo '<img src="' . $item . '" alt="">';
+                echo '</div>';
+                echo '<div class="down-content">';
+                echo '<h4>' . $title . '</h4>';
+                echo '<span>' . $category . '</span>';
+                echo '</div>';
+                echo '</div>';
+              } elseif ($fileType == 'mp4') {
+                echo '<div class="item">';
+                echo '<div class="portfolio-item">';
+                echo '<div class="thumb">';
+                echo '<video src="' . $item . '" muted loop></video>';
+                echo '</div>';
+                echo '<div class="down-content">';
+                echo '<h4>' . $title . '</h4>';
+                echo '<span>' . $category . '</span>';
+                echo '</div>';
+                echo '</div>';
+                echo '</div>';
+              }
+            }
+            ?>
           </div>
         </div>
       </div>
