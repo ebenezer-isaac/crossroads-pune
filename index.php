@@ -346,7 +346,7 @@
           </div>
         </div>
         <div class="col-lg-12 wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.25s">
-          <form id="contact" method="post">
+          <form id="contact" action="send_mail.php" method="post">
             <div class="row">
               <div class="col-lg-12">
                 <div class="contact-dec">
