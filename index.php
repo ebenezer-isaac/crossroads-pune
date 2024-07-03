@@ -316,13 +316,13 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-12" style="display:none">
+              <div class="col-lg-12">
                 <div class="blog-post">
                   <div class="down-content">
-                  <p style="font-weight:500">" Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doers itii eiumod deis tempor
-                      incididunt ut labore."</p>
+                  <p style="font-weight:500">"Last year's camp was indeed an experience of a lifetime I had a great time as a Volunteer it was exhausting but each and every activity was indeed memorable and thoroughly planned. It was not just a time of fun but I got to learn a lot through the various workshops. Cabin time was definitely the best time to vent out and collect our thought. Cant wait for the camp next year."</p>
                     <div style="padding-top: 1rem;">
-                      <span class="author"><img src="assets/images/author-post.jpg" alt="">By: Andrea Mentuzi</span>
+                    <span class="author"><img src="assets/images/sakshi.jpg" alt="">By: <a
+                    href="https://www.instagram.com/sakshh_here/">Sakshi</a>, Volunteer</span>
                     </div>
                   </div>
                 </div>
