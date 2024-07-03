@@ -93,16 +93,17 @@ try {
     $user_os = getOS();
     $user_browser = getBrowser();
     $cname = gethostbyaddr($_SERVER['REMOTE_ADDR']);
-    $ip = ip_get();
-    echo $ip;
     $ip = "";
     if (filter_var($cname, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4)) {
         $ip = $cname;
+    } else {
+        $ip = ip_get();
     }
-    echo $cname;
-    echo $ip;
-
-    $json = file_get_contents("http://ip-api.com/json");
+    if (filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4)) {
+        $json = file_get_contents("http://ip-api.com/json/{$ip}");
+    } else {
+        $json = file_get_contents("http://ip-api.com/json/");
+    }
     $json = json_decode($json, true);
     $ip = $json['query'];
     $country = $json['country'];
@@ -129,7 +130,7 @@ try {
         . "'" . mysqli_real_escape_string($conn, $country) . "', "
         . "'" . mysqli_real_escape_string($conn, $zip) . "', "
         . "'" . mysqli_real_escape_string($conn, $user_browser) . "', "
-        . "'" . mysqli_real_escape_string($conn, $user_os). "');";
+        . "'" . mysqli_real_escape_string($conn, $user_os) . "');";
     $conn->query($sql);
     $conn->close();
 } catch (Exception $e) {
