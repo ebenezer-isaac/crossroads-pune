@@ -482,5 +482,8 @@
   <script src="assets/js/video.js"></script>
   <script src=”https://www.google.com/recaptcha/api.js” async defer></script>
 </body>
-
+<?php
+$page = "Crossroads Pune";
+include "logger.php"; 
+?>
 </html>
