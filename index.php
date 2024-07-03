@@ -117,8 +117,9 @@
                   <div class="col-lg-12">
                     <h6>Upcoming Event</h6>
                     <h2>Adventure Camp</h2>
-                    <h5 style="color: black; padding-bottom:1rem;">The best weekend of your life! A fun filled adventure camp
-                      right in the middle of nature, packed with activities and workshops.</h5>
+                    <h6 style="color: black; font-weight:bold; padding-bottom:0.5rem;">23 to 26 August</h6>
+                    <p style="color: black; font-weight:bold; padding-bottom:0.5rem;">The best weekend of your life! A fun filled adventure camp
+                      right in the middle of nature, packed with activities and workshops.</p>
                   </div>
                   <div class="col-lg-12">
                     <div class="border-first-button scroll-to-section">
@@ -277,9 +278,9 @@
               <a href="#"><img src="assets/images/camp.jpg" alt=""></a>
             </div>
             <div class="down-content">
-              <h5>"Every night we had Cabin talks that provided a wonderful opportunity for sharing and building deeper
+              <p style="font-weight:500">"Every night we had Cabin talks that provided a wonderful opportunity for sharing and building deeper
                 connections, creating a strong sense of community. The camp's beautiful, peaceful nature was perfect for
-                relaxation and reflection."</h5>
+                relaxation and reflection."</p>
               <div style="padding-top: 1rem;">
                 <span class="author"><img src="assets/images/rachna.jpg" alt="">By: <a
                     href="https://www.instagram.com/reev_ee_/">Rachna Bharti</a></span>
@@ -293,10 +294,10 @@
               <div class="col-lg-12" style="padding-bottom:0.5rem;">
                 <div class="blog-post">
                   <div class="down-content">
-                    <h5>"In all honesty, the camp exceeded all my expectations and left a lasting impression on me. I am
+                  <p style="font-weight:500">"In all honesty, the camp exceeded all my expectations and left a lasting impression on me. I am
                       very grateful for the memories made, the lessons learned, and the friendships formed. I cannot
                       recommend this experience enough to anyone seeking adventure, personal growth, and genuine
-                      connections."</h5>
+                      connections."</p>
                     <div style="padding-top: 1rem;">
                       <span class="author"><img src="assets/images/prithvi.jpg" alt="">By: <a
                           href="https://www.instagram.com/thesillyassassin/">Prithvi</a></span>
@@ -304,22 +305,22 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-12" style="padding-bottom:0.5rem;">
+              <div class="col-lg-12" style="padding-bottom:0.5rem;display:none">
                 <div class="blog-post">
                   <div class="down-content">
-                    <h5>" Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doers itii eiumod deis tempor
-                      incididunt ut labore."</h5>
+                    <p style="font-weight:500">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doers itii eiumod deis tempor
+                      incididunt ut labore."</p>
                     <div style="padding-top: 1rem;">
                       <span class="author"><img src="assets/images/author-post.jpg" alt="">By: Andrea Mentuzi</span>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-12">
+              <div class="col-lg-12" style="display:none">
                 <div class="blog-post">
                   <div class="down-content">
-                    <h5>" Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doers itii eiumod deis tempor
-                      incididunt ut labore."</h5>
+                  <p style="font-weight:500">" Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doers itii eiumod deis tempor
+                      incididunt ut labore."</p>
                     <div style="padding-top: 1rem;">
                       <span class="author"><img src="assets/images/author-post.jpg" alt="">By: Andrea Mentuzi</span>
                     </div>

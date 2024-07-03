@@ -1000,7 +1000,7 @@ Banner Style
   content: "";
   background-image: linear-gradient(
       to right,
-      rgba(255, 255, 255, 0) 0% ,
+      rgba(255, 255, 255, 0) 0%,
       rgba(255, 255, 255, 1) 65%
     ),
     url(../images/teaser.jpg);
@@ -1039,7 +1039,6 @@ Banner Style
 
 .main-banner .left-content p {
   margin-bottom: 30px;
-  margin-right: 45px;
 }
 
 .main-banner .right-image {
@@ -1633,7 +1632,7 @@ Portfolio
   position: relative;
   display: flex;
   justify-content: center; /* Center video horizontally */
-  align-items:start;
+  align-items: start;
   height: 200px; /* Adjust height as needed */
   overflow: hidden;
 }
@@ -1645,7 +1644,6 @@ Portfolio
   transform: translate(-50%, -50%); /* Center the video within .thumb */
   height: 200px; /* Ensure video covers the entire .thumb */
   width: auto;
-  
 }
 
 .portfolio-item:hover .down-content h4,
@@ -2070,7 +2068,7 @@ responsive
   .header-area .main-nav .nav li:last-child {
     padding-left: 20px;
   }
-    .main-banner:after {
+  .main-banner:after {
     display: none;
   }
 }
