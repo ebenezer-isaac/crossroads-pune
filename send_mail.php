@@ -26,7 +26,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (mail($recipient, $subject, $email_content, $email_headers)) {
         // Set a 200 (okay) response code
         http_response_code(200);
-        echo "Thank You! Your message has been sent.";
+        echo "<script>alert('Thank You! Your message has been sent.');</script>";
+        echo "<script>window.location.href='index.html';</script>";
     } else {
         // Set a 500 (internal server error) response code
         http_response_code(500);
