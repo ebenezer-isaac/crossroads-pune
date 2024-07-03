@@ -14,10 +14,10 @@
   <!-- Primary Meta Tags -->
   <title>Crossroads Pune</title>
   <meta name="title" content="Crossroads Pune" />
-  <meta name="description" content="Social organization for young people aged 18 to 28 years." />
+  <meta name="description" content="Social organization for young people aged 18 to 25 years." />
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Social organization for young people aged 18 to 28 years.">
+  <meta name="description" content="Social organization for young people aged 18 to 25 years.">
   <meta name="author" content="Crossroads">
   <meta name="keywords"
     content="Crossroads, Crossroads Pune, Pune, Youth Group, Social Club, Meetups, Social Games, Adventure Camp" />
@@ -26,14 +26,14 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.crossroads-pune.org/" />
   <meta property="og:title" content="Crossroads Pune" />
-  <meta property="og:description" content="Social organization for young people aged 18 to 28 years." />
+  <meta property="og:description" content="Social organization for young people aged 18 to 25 years." />
   <meta property="og:image" content="https://www.crossroads-pune.org/assets/images/logo.png" />
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:url" content="https://www.crossroads-pune.org/" />
   <meta property="twitter:title" content="Crossroads Pune" />
-  <meta property="twitter:description" content="Social organization for young people aged 18 to 28 years." />
+  <meta property="twitter:description" content="Social organization for young people aged 18 to 25 years." />
   <meta property="twitter:image" content="https://www.crossroads-pune.org/assets/images/logo.png" />
 
   <!-- Meta Tags Generated with https://metatags.io -->
@@ -153,7 +153,7 @@
                   <h4>What is Crossroads <em>Pune</em></h4>
                   <div class="line-dec"></div>
                 </div>
-                <p>We are a social organization that works among young people between the ages of 18-28
+                <p>We are a social organization that works among young people between the ages of 18-25
                   years.
                 </p>
                 <p>Our focus is to provide a support system for young people through our relationships with them as we
