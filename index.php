@@ -219,9 +219,12 @@
     // Mute the video initially and enable autoplay
     v.muted = true;
 
-    document.addEventListener('DOMContentLoaded', (event) => {
-      v.play().catch(e => {
-        console.error("Auto-play failed", e);
+    document.getElementById('yourMediaElementId').addEventListener('loadedmetadata', function () {
+      this.play().then(() => {
+        console.log('Playback started successfully');
+      }).catch(error => {
+        console.log('Error attempting to play:', error);
+        // Handle the error, possibly by showing a play button to the user
       });
     });
 
@@ -327,8 +330,8 @@
             <h4>Rs <s>8052</s> 2000</a></h4>
             <p style="color: white;">We at Crssroads believe that every youth deserves a support
               system where they are valued, nurtured and heard. </p>
-              <p style="color: white;padding-bottom:1rem;">
-              So we cover as much expense as possible so that you too can experience this with us. </p>
+            <p style="color: white;padding-bottom:1rem;">
+              So we try to cover as much expense as possible so that you too can experience this with us. </p>
           </div>
           <div class="row">
             <div class="col-md-8 offset-md-2  wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
