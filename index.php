@@ -221,7 +221,7 @@
     // Mute the video initially and enable autoplay
     v.muted = true;
 
-    document.getElementById('yourMediaElementId').addEventListener('loadedmetadata', function () {
+    v.addEventListener('loadedmetadata', function () {
       this.play().then(() => {
         console.log('Playback started successfully');
       }).catch(error => {
