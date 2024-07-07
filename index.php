@@ -61,13 +61,16 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-94SEE7KVED"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-
     function gtag() {
       dataLayer.push(arguments);
     }
     gtag('js', new Date());
-
     gtag('config', 'G-94SEE7KVED');
+    gtag('event', 'page_opened');
+    function redirectToRegistration() {
+      window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSetZLRMTUgKIelZif54yFiYm14Jjc1na1xdBAyLvFoPC-8jyg/viewform?usp=sf_link";
+      gtag('event', 'registration_click');
+    }
   </script>
   <!-- ***** Preloader Start ***** -->
   <div id="js-preloader" class="js-preloader">
@@ -101,8 +104,7 @@
               <li class="scroll-to-section"><a href="#testimonials">Testimonials</a></li>
               <li class="scroll-to-section"><a href="#contact">Contact</a></li>
               <li class="scroll-to-section">
-                <div class="border-first-button"><a
-                    href="https://docs.google.com/forms/d/e/1FAIpQLSetZLRMTUgKIelZif54yFiYm14Jjc1na1xdBAyLvFoPC-8jyg/viewform?usp=sf_link">Register
+                <div class="border-first-button"><a href="javascript:redirectToRegistration()">Register
                     for Camp</a></div>
               </li>
             </ul>
@@ -144,8 +146,8 @@
                     <div class="row">
                       <div class="col-xl-5 col-sm-12" style="padding-bottom:1rem;">
                         <div class="border-first-button scroll-to-section">
-                          <a href="https://docs.google.com/forms/d/e/1FAIpQLSetZLRMTUgKIelZif54yFiYm14Jjc1na1xdBAyLvFoPC-8jyg/viewform?usp=sf_link"
-                            style="background-color: white;">Register Now</a>
+                          <a href="javascript:redirectToRegistration()" style="background-color: white;">Register
+                            Now</a>
                         </div>
                       </div>
                       <div class="col-xl-7 col-sm-12">
@@ -238,7 +240,7 @@
       } else {
         // Subsequent interactions: toggle play/pause
         if (v.paused) {
-          v.play().catch(e => console.error("Play failed", e));
+          v.play().then(() => gtag('event', 'teaser_played')).catch(e => console.error("Play failed", e));
         } else {
           v.pause();
         }
@@ -335,8 +337,7 @@
           </div>
           <div class="row">
             <div class="col-md-8 offset-md-2  wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
-              <div class="border-second-button"><a
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSetZLRMTUgKIelZif54yFiYm14Jjc1na1xdBAyLvFoPC-8jyg/viewform?usp=sf_link">Register
+              <div class="border-second-button"><a href="javascript:redirectToRegistration()">Register
                   NOW</a>
               </div>
             </div>
