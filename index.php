@@ -405,7 +405,7 @@
                       elit, sed doers itii eiumod deis tempor
                       incididunt ut labore."</p>
                     <div style="padding-top: 1rem;">
-                      <span class="author"><img src="assets/images/author-post.jpg" alt="">By:
+                      <span class="author"><img src="#" alt="">By:
                         Andrea Mentuzi</span>
                     </div>
                   </div>
@@ -545,7 +545,7 @@
               </div>
             </div>
 
-            <div class="g-zrecaptcha" data-sitekey="6LcKUQYqAAAAAK46IxCS4EaZaGZQ6VXSCQ_D17qa"></div>
+
           </form>
         </div>
       </div>
@@ -576,7 +576,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
     integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"
     integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -585,7 +584,6 @@
   <script src="assets/js/imagesloaded.js"></script>
   <script src="assets/js/custom.js"></script>
   <script src="assets/js/video.js"></script>
-  <script src=”https://www.google.com/recaptcha/api.js” async defer></script>
 </body>
 
 </html>
