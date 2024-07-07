@@ -117,7 +117,7 @@
           currLink.removeClass("active");
         }
       } catch (error) {
-        console.error(error);
+        //console.error(error);
       }
       currLink.removeClass("active");
     });
