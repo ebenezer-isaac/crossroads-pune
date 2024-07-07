@@ -223,7 +223,8 @@
 
     v.addEventListener('loadedmetadata', function () {
       this.play().then(() => {
-        console.log('Playback started successfully');
+        // Autoplay started
+        gtag('event', 'teaser_played');
       }).catch(error => {
         console.log('Error attempting to play:', error);
         // Handle the error, possibly by showing a play button to the user
@@ -233,14 +234,13 @@
     vv.onclick = function (e) {
       e.preventDefault();
       if (!userInteracted) {
-        console.log("User interacted");
         // First interaction: unmute the video
         v.muted = false;
         userInteracted = true;
       } else {
         // Subsequent interactions: toggle play/pause
         if (v.paused) {
-          v.play().then(() => gtag('event', 'teaser_played')).catch(e => console.error("Play failed", e));
+          v.play().catch(e => console.error("Play failed", e));
         } else {
           v.pause();
         }
