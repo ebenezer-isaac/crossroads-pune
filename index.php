@@ -57,20 +57,41 @@
 </head>
 
 <body>
+  <?php
+  // Sanitize and validate source input
+  function getValidSource($validSources)
+  {
+    $sourceTypes = ['GET' => $_GET, 'POST' => $_POST];
+    foreach ($sourceTypes as $type => $global) {
+      if (isset($global['source']) && in_array($global['source'], $validSources, true)) {
+        return htmlspecialchars($global['source']);
+      }
+    }
+    return "direct";
+  }
+
+  $validSources = ['flyer', 'poster', 'spoon', 'instagram'];
+  $source = getValidSource($validSources);
+  ?>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-94SEE7KVED"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-94SEE7KVED');
     gtag('event', 'page_opened');
+
     function redirectToRegistration() {
-      window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSetZLRMTUgKIelZif54yFiYm14Jjc1na1xdBAyLvFoPC-8jyg/viewform?usp=sf_link";
-      gtag('event', 'registration_click');
+      try {
+        window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSetZLRMTUgKIelZif54yFiYm14Jjc1na1xdBAyLvFoPC-8jyg/viewform?usp=sf_link";
+        gtag('event', 'registration_click');
+      } catch (error) {
+        console.error("Redirection failed", error);
+      }
     }
+
+    gtag('set', 'user_properties', { source: '<?php echo $source; ?>' });
   </script>
   <!-- ***** Preloader Start ***** -->
   <div id="js-preloader" class="js-preloader">
