@@ -76,12 +76,6 @@
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-94SEE7KVED"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-94SEE7KVED');
-    gtag('event', 'page_opened');
-
     function redirectToRegistration() {
       try {
         window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSetZLRMTUgKIelZif54yFiYm14Jjc1na1xdBAyLvFoPC-8jyg/viewform?usp=sf_link";
@@ -90,8 +84,16 @@
         console.error("Redirection failed", error);
       }
     }
-
-    gtag('set', 'user_properties', { source: '<?php echo $source; ?>' });
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-94SEE7KVED', {
+      'page_title': 'Crossroads Pune',
+      'page_path': '/index.php',
+      'utm_source': '<?php echo htmlspecialchars($source, ENT_QUOTES, 'UTF-8'); ?>'
+    });
+    gtag('event', 'page_opened');
+    console.log('Source:', '<?php echo $source; ?>');
   </script>
   <!-- ***** Preloader Start ***** -->
   <div id="js-preloader" class="js-preloader">
