@@ -96,6 +96,19 @@
     gtag('event', 'page_opened');
     gtag('send', 'user_properties', { source: '<?php echo $source; ?>' });
     console.log('Source:', '<?php echo $source; ?>');
+
+    function updateSourceCount($source) {
+      $jsonFile = './qr.json';
+      $data = file_get_contents($jsonFile);
+      $sources = json_decode($data, true);
+
+      if (array_key_exists($source, $sources)) {
+        $sources[$source]++;
+      }
+
+      $updatedData = json_encode($sources);
+      file_put_contents($jsonFile, $updatedData);
+    }
   </script>
   <!-- ***** Preloader Start ***** -->
   <div id="js-preloader" class="js-preloader">
