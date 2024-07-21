@@ -72,17 +72,15 @@
 
   $validSources = ['flyer', 'poster', 'spoon', 'instagram'];
   $source = getValidSource($validSources);
-  function updateSourceCount($source) {
+  function updateSourceCount($source)
+  {
+    echo "Source: $source";
     $jsonFile = './qr.json';
     $data = file_get_contents($jsonFile);
     $sources = json_decode($data, true);
-
     if (array_key_exists($source, $sources)) {
-      $sources[$source]++;
-    } else {
-      $sources[$source] = 1;
+      $sources[$source] = $sources[$source] + 1;
     }
-
     $updatedData = json_encode($sources);
     file_put_contents($jsonFile, $updatedData);
   }
@@ -93,23 +91,32 @@
   <script>
     function redirectToRegistration() {
       try {
-        window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSetZLRMTUgKIelZif54yFiYm14Jjc1na1xdBAyLvFoPC-8jyg/viewform?usp=sf_link";
+        window.location.href =
+          "https://docs.google.com/forms/d/e/1FAIpQLSetZLRMTUgKIelZif54yFiYm14Jjc1na1xdBAyLvFoPC-8jyg/viewform?usp=sf_link";
         gtag('event', 'registration_click');
       } catch (error) {
         console.error("Redirection failed", error);
       }
     }
     window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
     gtag('js', new Date());
     gtag('config', 'G-94SEE7KVED', {
       'page_title': 'Crossroads Pune',
       'page_path': '/index.php',
       'utm_source': '<?php echo htmlspecialchars($source, ENT_QUOTES, 'UTF-8'); ?>',
-      'user_properties', { source: '<?php echo $source; ?>' }
+      'user_properties',
+        {
+        source: '<?php echo $source; ?>'
+      }
     });
     gtag('event', 'page_opened');
-    gtag('send', 'user_properties', { source: '<?php echo $source; ?>' });
+    gtag('send', 'user_properties', {
+      source: '<?php echo $source; ?>'
+    });
     console.log('Source:', '<?php echo $source; ?>');
   </script>
   <!-- ***** Preloader Start ***** -->
@@ -373,7 +380,8 @@
             <p style="color: white;">We at Crssroads believe that every youth deserves a support
               system where they are valued, nurtured and heard. </p>
             <p style="color: white;padding-bottom:1rem;">
-              So we try to cover as much expense as possible so that you too can experience this with us. </p>
+              So we try to cover as much expense as possible so that you too can experience this with us.
+            </p>
           </div>
           <div class="row">
             <div class="col-md-8 offset-md-2  wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
