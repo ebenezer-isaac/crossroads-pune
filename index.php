@@ -72,6 +72,21 @@
 
   $validSources = ['flyer', 'poster', 'spoon', 'instagram'];
   $source = getValidSource($validSources);
+  function updateSourceCount($source) {
+    $jsonFile = './qr.json';
+    $data = file_get_contents($jsonFile);
+    $sources = json_decode($data, true);
+
+    if (array_key_exists($source, $sources)) {
+      $sources[$source]++;
+    } else {
+      $sources[$source] = 1;
+    }
+
+    $updatedData = json_encode($sources);
+    file_put_contents($jsonFile, $updatedData);
+  }
+  updateSourceCount($source);
   ?>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-94SEE7KVED"></script>
@@ -96,19 +111,6 @@
     gtag('event', 'page_opened');
     gtag('send', 'user_properties', { source: '<?php echo $source; ?>' });
     console.log('Source:', '<?php echo $source; ?>');
-
-    function updateSourceCount($source) {
-      $jsonFile = './qr.json';
-      $data = file_get_contents($jsonFile);
-      $sources = json_decode($data, true);
-
-      if (array_key_exists($source, $sources)) {
-        $sources[$source]++;
-      }
-
-      $updatedData = json_encode($sources);
-      file_put_contents($jsonFile, $updatedData);
-    }
   </script>
   <!-- ***** Preloader Start ***** -->
   <div id="js-preloader" class="js-preloader">
