@@ -90,9 +90,11 @@
     gtag('config', 'G-94SEE7KVED', {
       'page_title': 'Crossroads Pune',
       'page_path': '/index.php',
-      'utm_source': '<?php echo htmlspecialchars($source, ENT_QUOTES, 'UTF-8'); ?>'
+      'utm_source': '<?php echo htmlspecialchars($source, ENT_QUOTES, 'UTF-8'); ?>',
+      'user_properties', { source: '<?php echo $source; ?>' }
     });
     gtag('event', 'page_opened');
+    gtag('send', 'user_properties', { source: '<?php echo $source; ?>' });
     console.log('Source:', '<?php echo $source; ?>');
   </script>
   <!-- ***** Preloader Start ***** -->
