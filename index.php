@@ -60,44 +60,33 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
     integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script>
-    $(document).ready(function () {
-      const validSources = ['flyer', 'poster', 'spoon', 'instagram'];
+    <script>
+  $(document).ready(function () {
+    const validSources = ['flyer', 'poster', 'spoon', 'instagram'];
 
-      function getUrlParameter(name) {
-        name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-        const regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
-        const results = regex.exec(location.search);
-        return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
-      }
+    function getUrlParameter(name) {
+      name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+      const regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+      const results = regex.exec(location.search);
+      return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+    }
 
-      const source = getUrlParameter('source');
+    const source = getUrlParameter('source');
 
-      if (validSources.includes(source)) {
-        $.ajax({
-          type: 'POST',
-          url: 'updateSource.php',
-          data: { source: source },
-          success: function (response) {
-            console.log(response);
-          },
-          error: function (error) {
-            console.error('Error:', error);
-          }
-        });
-      } else {
-        console.log('Invalid source:', source);
-      }
-    });
-
-    function redirectToRegistration() {
-      try {
-        window.location.href =
-          "https://docs.google.com/forms/d/e/1FAIpQLSetZLRMTUgKIelZif54yFiYm14Jjc1na1xdBAyLvFoPC-8jyg/viewform?usp=sf_link";
-        gtag('event', 'registration_click');
-      } catch (error) {
-        console.error("Redirection failed", error);
-      }
+    if (validSources.includes(source)) {
+      $.ajax({
+        type: 'POST',
+        url: 'updateSource.php',
+        data: { source: source },
+        success: function (response) {
+          console.log(response);
+        },
+        error: function (error) {
+          console.error('Error:', error);
+        }
+      });
+    } else {
+      console.log('Invalid source:', source);
     }
 
     window.dataLayer = window.dataLayer || [];
@@ -120,7 +109,18 @@
       source: source
     });
     console.log('Source:', source);
-  </script>
+  });
+
+  function redirectToRegistration() {
+    try {
+      window.location.href =
+        "https://docs.google.com/forms/d/e/1FAIpQLSetZLRMTUgKIelZif54yFiYm14Jjc1na1xdBAyLvFoPC-8jyg/viewform?usp=sf_link";
+      gtag('event', 'registration_click');
+    } catch (error) {
+      console.error("Redirection failed", error);
+    }
+  }
+</script>
   <!-- ***** Preloader Start ***** -->
   <div id="js-preloader" class="js-preloader">
     <div class="preloader-inner">
