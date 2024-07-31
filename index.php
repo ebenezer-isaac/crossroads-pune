@@ -60,7 +60,17 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
     integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-94SEE7KVED"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'G-94SEE7KVED');
+
   $(document).ready(function () {
     const validSources = ['flyer', 'poster', 'spoon', 'instagram'];
 
@@ -89,13 +99,6 @@
       console.log('Invalid source:', source);
     }
 
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
     gtag('config', 'G-94SEE7KVED', {
       'page_title': 'Crossroads Pune',
       'page_path': '/index.php',
@@ -104,10 +107,12 @@
         source: source
       }
     });
+
     gtag('event', 'page_opened');
     gtag('send', 'user_properties', {
       source: source
     });
+
     console.log('Source:', source);
   });
 
