@@ -57,38 +57,39 @@
 </head>
 
 <body>
-  <?php
-  // Sanitize and validate source input
-  function getValidSource($validSources)
-  {
-    $sourceTypes = ['GET' => $_GET, 'POST' => $_POST];
-    foreach ($sourceTypes as $type => $global) {
-      if (isset($global['source']) && in_array($global['source'], $validSources, true)) {
-        return htmlspecialchars($global['source']);
-      }
-    }
-    return "direct";
-  }
-
-  $validSources = ['flyer', 'poster', 'spoon', 'instagram'];
-  $source = getValidSource($validSources);
-  function updateSourceCount($source)
-  {
-    echo "Source: $source";
-    $jsonFile = './qr.json';
-    $data = file_get_contents($jsonFile);
-    $sources = json_decode($data, true);
-    if (array_key_exists($source, $sources)) {
-      $sources[$source] = $sources[$source] + 1;
-    }
-    $updatedData = json_encode($sources);
-    file_put_contents($jsonFile, $updatedData);
-  }
-  updateSourceCount($source);
-  ?>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-94SEE7KVED"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5/0U5vp2o6RYgp6K0sk5/fNHl5ph/+4vnYFiw5U5"
+    crossorigin="anonymous"></script>
   <script>
+    $(document).ready(function () {
+      const validSources = ['flyer', 'poster', 'spoon', 'instagram'];
+
+      function getUrlParameter(name) {
+        name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+        const regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+        const results = regex.exec(location.search);
+        return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+      }
+
+      const source = getUrlParameter('source');
+
+      if (validSources.includes(source)) {
+        $.ajax({
+          type: 'POST',
+          url: 'updateSource.php',
+          data: { source: source },
+          success: function (response) {
+            console.log(response);
+          },
+          error: function (error) {
+            console.error('Error:', error);
+          }
+        });
+      } else {
+        console.log('Invalid source:', source);
+      }
+    });
+
     function redirectToRegistration() {
       try {
         window.location.href =
@@ -98,26 +99,27 @@
         console.error("Redirection failed", error);
       }
     }
+
     window.dataLayer = window.dataLayer || [];
 
     function gtag() {
       dataLayer.push(arguments);
     }
+
     gtag('js', new Date());
     gtag('config', 'G-94SEE7KVED', {
       'page_title': 'Crossroads Pune',
       'page_path': '/index.php',
-      'utm_source': '<?php echo htmlspecialchars($source, ENT_QUOTES, 'UTF-8'); ?>',
-      'user_properties',
-        {
-        source: '<?php echo $source; ?>'
+      'utm_source': source,
+      'user_properties': {
+        source: source
       }
     });
     gtag('event', 'page_opened');
     gtag('send', 'user_properties', {
-      source: '<?php echo $source; ?>'
+      source: source
     });
-    console.log('Source:', '<?php echo $source; ?>');
+    console.log('Source:', source);
   </script>
   <!-- ***** Preloader Start ***** -->
   <div id="js-preloader" class="js-preloader">
