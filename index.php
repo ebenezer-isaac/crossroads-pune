@@ -194,8 +194,9 @@
         <div class="col-md-12">
           <div class="section-heading wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
             <h6>This August</h6>
-            <h4>An Adventure Camp in the Midst of Nature</h4>
-            <p style="color: white;padding-bottom:1rem;">Don't miss out on this amazing opportunity to have fun!!</p>
+            <h4>Get Ready to Lose Yourself in Nature's Embrace</h4>
+            <p style="color: white;padding-bottom:1rem;">Don't miss your chance to dive into an adventure of a lifetime!
+            </p>
             <div class="line-dec"></div>
             <h4>What's Included:</h4>
             <ul style="color: white; list-style-type: disc; margin-left: 20px;">
@@ -452,8 +453,8 @@
       <div class="row">
         <div class="col-lg-6 offset-lg-3">
           <div class="section-heading wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
-            <h6>Contact Us</h6>
-            <h4>Get In Touch With Us <em>Now</em></h4>
+            <h6>Let's Connect</h6>
+            <h4>We're Here for a Friendly Chat Anytime</h4>
             <div class="line-dec"></div>
           </div>
         </div>
@@ -468,7 +469,7 @@
               <div class="col-lg-4">
                 <div id="map">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30258.495279306466!2d73.78137100000001!3d18.559971549999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2becff05dd3cb%3A0xa1911297fb7fab7d!2sBaner%2C%20Pune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1719854617391!5m2!1sen!2sin"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3774.2341216418813!2d73.50397127520152!3d18.921028482251963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c632ffffffff%3A0x9bcb587fa99f7989!2sBombay%20YMCA%20-%20Camp%20Lakeside!5e0!3m2!1sen!2sin!4v1723143042510!5m2!1sen!2sin"
                     width="100%" height="658px" frameborder="0" style="border:0" allowfullscreen></iframe>
                 </div>
               </div>
@@ -476,16 +477,16 @@
                 <div class="fill-form">
                   <div class="row">
                     <div class="col-lg-4">
-                      <a href="tel:+919886147528">
+                      <a href="https://wa.me/919886147528">
                         <div class="info-post">
                           <div class="icon">
                             <ul>
                               <li>
-                                <i class="fa-solid fa-phone fa-2xl" style="color: #FE7877;"></i>
+                                <i class="fa-solid fa-whatsapp fa-2xl" style="color: #FE7877;"></i>
                               </li>
                               <li>
-                                <a href="tel:+919886147528">Godly: 9886147528 <br>
-                                  Sumanth: 7620052882</a>
+                                <a href="https://wa.me/919886147528">Godly: 9886147528 <br>
+                                  </a>
                               </li>
                             </ul>
                           </div>
@@ -493,16 +494,15 @@
                       </a>
                     </div>
                     <div class="col-lg-4">
-                      <a href="mailto:punecrossroads@gmail.com">
+                      <a href="https://wa.me/917620052882">
                         <div class="info-post">
                           <div class="icon">
                             <ul>
                               <li>
-                                <i class="fa-solid fa-envelope-open-text fa-2xl" style="color: #B197FC;"></i>
+                                <i class="fa-solid fa-whatsapp fa-2xl" style="color: #B197FC;"></i>
                               </li>
                               <li>
-                                <a href="mailto:punecrossroads@gmail.com ">punecrossroads
-                                  @gmail.com</a>
+                                <a href="https://wa.me/917620052882">Sumanth: 7620052882</a>
                               </li>
                             </ul>
                           </div>
@@ -518,7 +518,7 @@
                                 <i class="fa-solid fa-map-location-dot fa-2xl" style="color: #FFD43B;"></i>
                               </li>
                               <li>
-                                <a href="https://maps.app.goo.gl/2aA4TU5cvPML45XeA">Baner,
+                                <a href="https://g.co/kgs/74EsBVY">Baner,
                                   Pune, Maharashtra</a>
                               </li>
                             </ul>
@@ -547,16 +547,13 @@
 
                     <div class="col-lg-12">
                       <fieldset>
-                        <button type="submit" id="form-submit" class="main-button ">Send Message
-                          Now</button>
+                        <button type="submit" id="form-submit" class="main-button ">Send Mail</button>
                       </fieldset>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-
-
           </form>
         </div>
       </div>
