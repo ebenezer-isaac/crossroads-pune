@@ -40,7 +40,6 @@
   <!-- <meta content="Crossroads - Pune" name="twitter:site">
   <meta content="Crossroads" name="twitter:creator"> -->
   <meta content="Crossroads - Pune" name="application-name">
-  <meta charset="utf-8">
   <title>Crossroads Pune</title>
 
   <!-- Bootstrap core CSS -->
@@ -57,75 +56,6 @@
 </head>
 
 <body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-94SEE7KVED"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-
-  gtag('js', new Date());
-  gtag('config', 'G-94SEE7KVED');
-
-  $(document).ready(function () {
-    const validSources = ['flyer', 'poster', 'spoon', 'instagram'];
-
-    function getUrlParameter(name) {
-      name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-      const regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
-      const results = regex.exec(location.search);
-      return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
-    }
-
-    const source = getUrlParameter('source');
-
-    if (validSources.includes(source)) {
-      $.ajax({
-        type: 'POST',
-        url: 'updateSource.php',
-        data: { source: source },
-        success: function (response) {
-          console.log(response);
-        },
-        error: function (error) {
-          console.error('Error:', error);
-        }
-      });
-    } else {
-      console.log('Invalid source:', source);
-    }
-
-    gtag('config', 'G-94SEE7KVED', {
-      'page_title': 'Crossroads Pune',
-      'page_path': '/index.php',
-      'utm_source': source,
-      'user_properties': {
-        source: source
-      }
-    });
-
-    gtag('event', 'page_opened');
-    gtag('send', 'user_properties', {
-      source: source
-    });
-
-    console.log('Source:', source);
-  });
-
-  function redirectToRegistration() {
-    try {
-      window.location.href =
-        "https://docs.google.com/forms/d/e/1FAIpQLSetZLRMTUgKIelZif54yFiYm14Jjc1na1xdBAyLvFoPC-8jyg/viewform?usp=sf_link";
-      gtag('event', 'registration_click');
-    } catch (error) {
-      console.error("Redirection failed", error);
-    }
-  }
-</script>
   <!-- ***** Preloader Start ***** -->
   <div id="js-preloader" class="js-preloader">
     <div class="preloader-inner">
@@ -258,11 +188,40 @@
     </div>
   </div>
 
+  <div id="camp-announcement" class="free-quote">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-heading wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
+            <h6>This August</h6>
+            <h4>An Adventure Camp in the Midst of Nature</h4>
+            <p style="color: white;padding-bottom:1rem;">Don't miss out on this amazing opportunity to have fun!!</p>
+            <div class="line-dec"></div>
+            <h4>What's Included:</h4>
+            <ul style="color: white; list-style-type: disc; margin-left: 20px;">
+              <li>4 days and 3 nights</li>
+              <li>Bus Transportation (To & Fro)</li>
+              <li>Food & Stay</li>
+              <li>Activities</li>
+              <li>Games & Fun</li>
+              <li>Workshops</li>
+            </ul>
+          </div>
+          <div class="row">
+            <div class="col-md-8 offset-md-2 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
+              <div class="border-second-button"><a href="javascript:redirectToRegistration()">Register NOW</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <div id="new-section" style="background-color: black;"></div>
   <video id="teaserPlayer" src="assets/videos/teaser.mp4" style="width: 100vw; height: 100%;" muted loop autoplay
     controls></video>
-  <source src="teaser.mp4" type="video/mp4">
+  <source src="assets/videos/teaser.mp4" type="video/mp4">
   </video>
   <div id="vOverlay"
     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; cursor: pointer; z-index: 1;"></div>
@@ -277,29 +236,26 @@
 
     v.addEventListener('loadedmetadata', function () {
       this.play().then(() => {
-        // Autoplay started
         gtag('event', 'teaser_played');
       }).catch(error => {
         console.log('Error attempting to play:', error);
-        // Handle the error, possibly by showing a play button to the user
+        // Display a play button or prompt user to interact
       });
     });
 
     vv.onclick = function (e) {
       e.preventDefault();
       if (!userInteracted) {
-        // First interaction: unmute the video
         v.muted = false;
         userInteracted = true;
       } else {
-        // Subsequent interactions: toggle play/pause
         if (v.paused) {
           v.play().catch(e => console.error("Play failed", e));
         } else {
           v.pause();
         }
       }
-      return false; // Prevent default action
+      return false;
     };
   </script>
   <div id="gallery" class="our-portfolio section">
@@ -625,7 +581,75 @@
       </div>
     </div>
   </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-94SEE7KVED"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-94SEE7KVED');
+
+    $(document).ready(function () {
+      const validSources = ['flyer', 'poster', 'spoon', 'instagram'];
+
+      function getUrlParameter(name) {
+        name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+        const regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+        const results = regex.exec(location.search);
+        return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+      }
+
+      const source = getUrlParameter('source');
+
+      if (validSources.includes(source)) {
+        $.ajax({
+          type: 'POST',
+          url: 'updateSource.php',
+          data: { source: source },
+          success: function (response) {
+            console.log(response);
+          },
+          error: function (error) {
+            console.error('Error:', error);
+          }
+        });
+      } else {
+        console.log('Invalid source:', source);
+      }
+
+      gtag('config', 'G-94SEE7KVED', {
+        'page_title': 'Crossroads Pune',
+        'page_path': '/index.php',
+        'utm_source': source,
+        'user_properties': {
+          source: source
+        }
+      });
+
+      gtag('event', 'page_opened');
+      gtag('send', 'user_properties', {
+        source: source
+      });
+
+      console.log('Source:', source);
+    });
+
+    function redirectToRegistration() {
+      try {
+        window.location.href =
+          "https://docs.google.com/forms/d/e/1FAIpQLSetZLRMTUgKIelZif54yFiYm14Jjc1na1xdBAyLvFoPC-8jyg/viewform?usp=sf_link";
+        gtag('event', 'registration_click');
+      } catch (error) {
+        console.error("Redirection failed", error);
+      }
+    }
+  </script>
 
   <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"
