@@ -245,6 +245,7 @@
 
     overlay.addEventListener('click', (e) => {
       e.preventDefault();
+      console.log("User Interaction")
       if (!userInteracted) {
         video.muted = false;
         userInteracted = true;
