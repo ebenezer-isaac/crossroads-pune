@@ -220,45 +220,40 @@
 
 
   <div id="new-section" style="background-color: black;"></div>
-  <video id="teaserPlayer" src="assets/videos/teaser.mp4" style="width: 100vw; height: 100%;" muted loop autoplay
-    controls></video>
-  <source src="assets/videos/teaser.mp4" type="video/mp4">
+  <video id="teaserPlayer" src="assets/videos/teaser.mp4" style="width: 100vw; height: 100%;" controls muted loop
+    autoplay>
+    <source src="assets/videos/teaser.mp4" type="video/mp4">
   </video>
   <div id="vOverlay"
     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; cursor: pointer; z-index: 1;"></div>
 
   <script>
-    var v = document.getElementById('teaserPlayer');
-    var vv = document.getElementById('vOverlay');
-    var userInteracted = false; // Track if the user has interacted
+    const video = document.getElementById('teaserPlayer');
+    const overlay = document.getElementById('vOverlay');
+    let userInteracted = false; // Track if the user has interacted
 
-    // Mute the video initially and enable autoplay
-    v.muted = true;
+    // Ensure video starts muted and autoplays
+    video.muted = true;
 
-    v.addEventListener('loadedmetadata', function () {
-      this.play().then(() => {
+    video.addEventListener('loadedmetadata', () => {
+      video.play().then(() => {
         gtag('event', 'teaser_played');
       }).catch(error => {
         console.log('Error attempting to play:', error);
-        // Display a play button or prompt user to interact
       });
     });
 
-    vv.onclick = function (e) {
+    overlay.addEventListener('click', (e) => {
       e.preventDefault();
       if (!userInteracted) {
-        v.muted = false;
+        video.muted = false;
         userInteracted = true;
       } else {
-        if (v.paused) {
-          v.play().catch(e => console.error("Play failed", e));
-        } else {
-          v.pause();
-        }
+        video.paused ? video.play().catch(e => console.error("Play failed", e)) : video.pause();
       }
-      return false;
-    };
+    });
   </script>
+
   <div id="gallery" class="our-portfolio section">
     <div class="container">
       <div class="row">
@@ -486,7 +481,7 @@
                               </li>
                               <li>
                                 <a href="https://wa.me/919886147528">Godly: 9886147528 <br>
-                                  </a>
+                                </a>
                               </li>
                             </ul>
                           </div>
