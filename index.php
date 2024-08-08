@@ -518,8 +518,7 @@
                                 <i class="fa-solid fa-map-location-dot fa-2xl" style="color: #FFD43B;"></i>
                               </li>
                               <li>
-                                <a href="https://g.co/kgs/74EsBVY">Baner,
-                                  Pune, Maharashtra</a>
+                                <a href="https://g.co/kgs/74EsBVY">YMCA Lakeside, Nilshi</a>
                               </li>
                             </ul>
                           </div>
