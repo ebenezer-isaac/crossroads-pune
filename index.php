@@ -220,16 +220,12 @@
 
 
   <div id="new-section" style="background-color: black;"></div>
-  <video id="teaserPlayer" src="assets/videos/teaser.mp4" style="width: 100vw; height: 100%;" controls muted loop
-    autoplay>
+  <video id="teaserPlayer" src="assets/videos/teaser.mp4" style="width: 100vw; height: 100%;" muted loop autoplay>
     <source src="assets/videos/teaser.mp4" type="video/mp4">
   </video>
-  <div id="vOverlay"
-    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; cursor: pointer; z-index: 1;"></div>
 
   <script>
     const video = document.getElementById('teaserPlayer');
-    const overlay = document.getElementById('vOverlay');
     let userInteracted = false; // Track if the user has interacted
 
     // Ensure video starts muted and autoplays
@@ -243,9 +239,7 @@
       });
     });
 
-    overlay.addEventListener('click', (e) => {
-      e.preventDefault();
-      console.log("User Interaction")
+    video.addEventListener('click', () => {
       if (!userInteracted) {
         video.muted = false;
         userInteracted = true;
@@ -254,6 +248,7 @@
       }
     });
   </script>
+
 
   <div id="gallery" class="our-portfolio section">
     <div class="container">
