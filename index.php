@@ -454,7 +454,7 @@
         <div class="col-lg-6 offset-lg-3">
           <div class="section-heading wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
             <h6>Let's Connect</h6>
-            <h4>We're Here for a Friendly Chat Anytime</h4>
+            <h4>We're Here for a Friendly Chat <em>Anytime</em></h4>
             <div class="line-dec"></div>
           </div>
         </div>
@@ -482,7 +482,7 @@
                           <div class="icon">
                             <ul>
                               <li>
-                                <i class="fa-solid fa-whatsapp fa-2xl" style="color: #FE7877;"></i>
+                                <i class="fa-brands fa-whatsapp fa-2xl" style="color: #FE7877;"></i>
                               </li>
                               <li>
                                 <a href="https://wa.me/919886147528">Godly: 9886147528 <br>
@@ -499,7 +499,7 @@
                           <div class="icon">
                             <ul>
                               <li>
-                                <i class="fa-solid fa-whatsapp fa-2xl" style="color: #B197FC;"></i>
+                                <i class="fa-brands fa-whatsapp fa-2xl" style="color: #B197FC;"></i>
                               </li>
                               <li>
                                 <a href="https://wa.me/917620052882">Sumanth: 7620052882</a>
