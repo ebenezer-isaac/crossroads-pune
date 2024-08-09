@@ -327,7 +327,7 @@
         <div class="col-md-12">
           <div class="section-heading  wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
             <h6>Register for Camp NOW!</h6>
-            <h4>Free T-Shirt for registering before 8th August</h4>
+            <h4>Free T-Shirt for registering before 11th August</h4>
             <p style="color: white;padding-bottom:1rem;">Get Flat Rs.150 off for every friend you bring
               along. </p>
             <div class="line-dec"></div>
