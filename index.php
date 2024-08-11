@@ -130,8 +130,7 @@
                     <div class="row">
                       <div class="col-xl-5 col-sm-12" style="padding-bottom:1rem;">
                         <div class="border-first-button scroll-to-section">
-                          <a href="javascript:redirectToRegistration()" style="background-color: white;">Register
-                            Now</a>
+                          <a href="https://g.co/kgs/74EsBVY" style="background-color: white;">Camp Location</a>
                         </div>
                       </div>
                       <div class="col-xl-7 col-sm-12">
